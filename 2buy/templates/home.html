@@ -1,0 +1,128 @@
+{% extends "index.html" %}
+{% block home_content %}
+<!--Main Page-->
+<table class="home-grid" aria-label="Home Container">
+    <tr>
+        <th id="list-title">
+            <h1 id="title-text">Groceries</h1>
+        </th>
+        <th id="title-edit">
+            <button id="edit-button" type="button">@</button>
+        </th>
+        <th id="account-name">
+            <h5 id="account-text">Backend D.</h5>
+        </th>
+        <th>
+            <button id="hamburger-button" type="button">=</button>
+        </th>
+    </tr>
+    <table class="list-ui" aria-label="List Features">
+        <tr>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <button id="add-item" type="button" onclick="openForm()">Add Item</button>
+            </td>
+            <td rowspan="4">
+                <div id="list-area">
+                    <table class="list-table" id="list-table" aria-label="Items Table">
+                        <tr id="category-title">
+                            <th id="item-quantity">Quantity</th>
+                            <th id="item-name">Name</th>
+                            <th id="item-type">Type</th>
+                            <th id="item-price">Price</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{item_quantity}}
+                            </td>
+                            <td>
+                                {{item_name}}
+                            </td>
+                            <td>
+                                {{item_type}}
+                            </td>
+                            <td>
+                                {{item_price}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="remove-item" type="button" onclick="deleteData()">Remove Item</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="edit-item" type="button" onclick="updateData()">Edit Item</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="search-item" type="button" onclick="readData()">Search Item</button>
+            </td>
+        </tr>
+    </table>
+</table>
+
+<!--Add Item Page-->
+<div id="add-box" class="form-box">
+    <div class="form-content">
+        <span class="close-button">&times;</span>
+        <h1>Add Item</h1>
+        <p>Enter the information about the item.</p>
+        <form action="#" method="post">
+            <table aria-label="Item Information">
+                <tr>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>A. Quantity</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="quantity-entry" name="quantity-entry" type="number" placeholder="eg. 3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>B. Name</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="name-entry" name="name-entry" type="text" placeholder="eg. Apple"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>C. Type</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="type-entry" name="type-entry" type="text" placeholder="eg. Fruit"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>D. Price</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="price-entry" name="price-entry" type="number" placeholder="eg. 30"/>
+                    </td>
+                </tr>
+            </table>
+            <input id="submit-item" type="submit" value="Submit" onclick="createData()"/>
+        </form>
+    </div>
+</div>
+{% endblock %}

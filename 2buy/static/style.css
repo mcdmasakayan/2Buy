@@ -1,0 +1,292 @@
+body{
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 5vh 3vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#login-logo{
+    width: 5vw;
+    height: 8vh;
+}
+
+.login-grid,
+.home-grid,
+.list-ui,
+.list-table,
+.list-ui #category-title{
+    width: 100%;
+}
+
+.login-grid #content-title{
+    padding: 10vh 0vw 5vh 0vw;
+    color: #86DC3D;
+    font-size: 7vh;
+    text-align: left;
+}
+
+.login-grid #table-quote{
+    width: 50vw;
+}
+
+.login-grid #login-quote{
+    font-size: 8vh;
+}
+
+.login-grid .table-data{
+    margin: 0;
+    font-weight: normal;
+}
+
+.login-grid #username-label, 
+.login-grid #password-label{
+    margin: 0vh 2vw 0vh 5vw;
+    width: fit-content;
+    font-size: large;
+}
+
+.login-grid #username-entry, 
+.login-grid #password-entry,
+.form-content #quantity-entry,
+.form-content #name-entry,
+.form-content #type-entry,
+.form-content #price-entry{
+    float: left;
+    width: 25vw;
+    height: 5vh;
+    margin-right: 0;
+    border-radius: 0.5vw;
+    border-style: solid;
+}
+
+.login-grid #login-button{
+    margin: 2vh 0vw 2vh 0vw;
+    padding: 0vh 2vw 0vh 2vw;
+    width: 25vw;
+    height: 5vh;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #86DC3D;
+    border-color: #86DC3D;
+    border-radius: 0.5vw;
+    border-style: solid;
+}
+
+.login-grid #login-button:hover,
+.login-grid #signup-button:hover,
+.home-grid #edit-button:hover,
+.list-ui #add-item:hover,
+.list-ui #remove-item:hover,
+.list-ui #edit-item:hover,
+.list-ui #search-item:hover
+#add-item:hover,
+#delete-item:hover,
+#edit-item:hover,
+#search-item:hover,
+#submit-item:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.login-grid #signup-button{
+    float: left;
+    margin: 2vh 0vw 2vh 0vw;
+    padding: 0vh 3.2vw 0vh 3.2vw;
+    width: fit-content;
+    height: 5vh;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #86DC3D;
+    border-color: #86DC3D;
+    border-radius: 0.5vw;
+    border-style: solid;
+}
+
+.login-grid #separator {
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.login-grid #separator::before,
+.login-grid #separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 0.1vw solid #000;
+}
+
+.login-grid #separator:not(:empty)::before {
+    margin-right: 0.55vw;
+}
+
+.login-grid #separator:not(:empty)::after {
+    margin-left: 0.55vw;
+}
+
+.login-grid #signup-text{
+    float: left;
+    margin: 3.5vh 0vw 2vh 1.8vw;
+    width: fit-content;
+}
+
+.home-grid #list-title{
+    width: 0vw;
+    padding-right: 2vw;
+}
+
+.home-grid #title-text{
+    text-align: left;
+    width: fit-content;
+}
+
+.home-grid #edit-button{
+    float: left;
+    padding: 0.5vh 1vw 0.5vh 1vw;
+    height: 5vh;
+    color: #FFFFFF;
+    background-color: #86DC3D;
+    border-color: #86DC3D;
+    border-radius: 0.5vw;
+    border-style: solid;
+}
+
+.home-grid #hamburger-button{
+    float: right;
+    padding: 0.5vh 1vw 0.5vh 1vw;
+    height: 5vh;
+    color: #AAAAAA;
+    background-color: #FFFFFF;
+    border-color: #AAAAAA;
+    border-width: 0.1vw;
+    border-radius: 0.5vw;
+    border-style: solid;
+}
+
+.home-grid #hamburger-button:hover{
+    color: #FFFFFF;
+    background-color: #86DC3D;
+    border-color: #86DC3D;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.home-grid #account-text{
+    float: right;
+    margin-left: 40vw;
+    width: fit-content;
+}
+
+.list-ui #add-item,
+.list-ui #remove-item,
+.list-ui #edit-item,
+.list-ui #search-item{
+    margin-right: -10vw;
+    padding: 0vh 3.2vw 0vh 3.2vw;
+    width: 20vw;
+    height: 7vh;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #86DC3D;
+    border-color: #86DC3D;
+    border-radius: 0.5vw;
+    border-style: solid;
+}
+
+.list-ui #list-area{
+    height: 55vh;
+    overflow-y: scroll;
+    border: 0.1vw solid #000000;
+}
+
+.list-table th{
+    padding: 1.8vh 1.8vw 1.8vh 1.8vw;
+    color: #FFFFFF;
+    background-color: #86DC3D;
+}
+
+.list-table, .list-table th, .list-table td{
+    border: 0.1vw solid #000000;
+    border-collapse: collapse;
+}
+
+.list-table #item-quantity{
+    width: 5%;
+}
+
+.list-table #item-name{
+    width: 50%;
+}
+
+.list-table #item-type{
+    width: 25%;
+}
+
+.list-table #item-price{
+    width: 20%;
+}
+
+.list-table tr:not(#category-title):hover{
+    color: #FFFFFF;
+    background-color: #86DC3D;
+    opacity: 0.8;
+}
+
+.form-box{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 13.85vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #292929;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+.form-content{
+    background-color: #fefefe;
+    margin: -7vh auto;
+    padding: 1.8vh 1.8vw 1.8vh 1.8vw;
+    border: 0.1vw solid #888;
+    width: 30%;
+    height: auto;
+}
+
+.form-content h1{
+    color: #86DC3D;
+}
+
+.form-content input{
+    width: 100%;
+}
+
+.close-button{
+    color: #AAAAAA;
+    float: right;
+    font-size: 3.88vh;
+    font-weight: bold;
+}
+
+#submit-item{
+    margin-top: 3vh;
+    margin-right: 1vw;
+    margin-bottom: 1.5vh;
+    border-radius: 0.8vw;
+    border-width: 0.2vw;
+    border-color: #86DC3D;
+    border-style: solid;
+    padding: 2vh 2vw;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #86DC3D;
+    font-weight: bold;
+}
+
+.close-button:hover, .close-button:focus {
+    color: #86DC3D;
+    text-decoration: none;
+    cursor: pointer;
+}
