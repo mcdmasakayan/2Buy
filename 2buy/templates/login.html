@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 {% block login_content %}
 <img id="login-logo" src="/static/images/2b-logo.png" alt="website-logo">
-<form id="login-form" name="login-form" action="#" method="get">
+<form id="login-form" name="login-form" action="/2buy-login" method="post">
     <table class="login-grid" aria-label="Login Container">
         <tr>
             <th id="content-title" colspan="3">Login to 2Buy</th>
@@ -14,7 +14,7 @@
                 <p class="table-data" id="username-label">Username</p>
             </td>
             <td>
-                <input class="table-data" id="username-entry" type="text"/>
+                <input class="table-data" id="username-entry" name="username-entry" type="text"/>
             </td>
         </tr>
         <tr>
@@ -22,14 +22,14 @@
                 <p class="table-data" id="password-label">Password</p>
             </td>
             <td>
-                <input class="table-data" id="password-entry" type="password"/>
+                <input class="table-data" id="password-entry" name="password-entry" type="password"/>
             </td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td>
-                <input id="login-button" type="submit" value="Login" onclick="validate()"/>
+                <input id="login-button" type="submit" value="Login"/>
                 <div id="separator">or</div>
                 <input id="signup-button" type="button" value="Signup" onclick=""/>
                 <p id="signup-text">to create a new account.</p>

@@ -13,7 +13,9 @@
             <h5 id="account-text">Backend D.</h5>
         </th>
         <th>
-            <button id="hamburger-button" type="button">=</button>
+            <form id="sign-out" name="sign-out" class="user-page" action="/2buy-login">
+                <input id="logout-button" name="logout-button" type="submit" value="Sign Out"/>
+            </form>
         </th>
     </tr>
     <table class="list-ui" aria-label="List Features">
@@ -33,27 +35,31 @@
                             <th id="item-type">Type</th>
                             <th id="item-price">Price</th>
                         </tr>
-                        <tr>
+                        {% for item in data %}
+                        <tr id="row-{{item[0]}}">
                             <td>
-                                {{item_quantity}}
+                                {{item[1]}}
                             </td>
                             <td>
-                                {{item_name}}
+                                {{item[2]}}
                             </td>
                             <td>
-                                {{item_type}}
+                                {{item[3]}}
                             </td>
                             <td>
-                                {{item_price}}
+                                {{item[4]}}
                             </td>
                         </tr>
+                        {% endfor %}
                     </table>
                 </div>
             </td>
         </tr>
         <tr>
             <td>
-                <button id="remove-item" type="button" onclick="deleteData()">Remove Item</button>
+                <form id="delete-item" name="delete-item">
+                    <button id="remove-item" type="button" form="delete-item">Remove Item</button>
+                </form>
             </td>
         </tr>
         <tr>
@@ -75,7 +81,7 @@
         <span class="close-button">&times;</span>
         <h1>Add Item</h1>
         <p>Enter the information about the item.</p>
-        <form action="#" method="post">
+        <form id="add-item" name="add-item" class="info-grid" action="#" method="post">
             <table aria-label="Item Information">
                 <tr>
                     <th></th>
@@ -121,7 +127,7 @@
                     </td>
                 </tr>
             </table>
-            <input id="submit-item" type="submit" value="Submit" onclick="createData()"/>
+            <input id="submit-item" type="submit" value="Submit"/>
         </form>
     </div>
 </div>
